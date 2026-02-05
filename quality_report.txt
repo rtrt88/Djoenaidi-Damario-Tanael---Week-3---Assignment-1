@@ -1,0 +1,31 @@
+==================================================
+DATA QUALITY REPORT
+==================================================
+
+RECORDS PROCESSED
+------------------------------
+Total records: 16
+Valid: 9
+Invalid: 7
+Valid rate: 56.2%
+
+COMPLETENESS PER FIELD
+------------------------------
+  title: 87.5%
+  content: 93.8%
+  url: 93.8%
+  date: 100.0%
+  author: 87.5%
+
+COMMON VALIDATION FAILURES
+------------------------------
+  [2x] url must start with http:// or https://
+  [2x] url has no host
+  [1x] content too short (min 20 chars, got 5)
+  [1x] empty required field: url
+  [1x] empty required field: title
+  [1x] missing required field: title
+  [1x] empty required field: content
+  [1x] content is null
+
+==================================================

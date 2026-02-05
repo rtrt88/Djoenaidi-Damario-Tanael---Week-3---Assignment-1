@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Valid Article Title",
+    "content": "This is a properly formatted article with sufficient content. It discusses important topics and provides useful information for readers. The content meets the minimum length requirement and is well-structured.",
+    "url": "https://example.com/article/1",
+    "date": "2024-01-15",
+    "author": "John Doe"
+  },
+  {
+    "title": "Article with HTML artifacts",
+    "content": "This content has HTML tags that need removal. Also has entities and “smart quotes” mixed in. alert('xss') should be stripped.",
+    "url": "https://example.com/article/2",
+    "date": "2024-01-15",
+    "author": "Jane Smith"
+  },
+  {
+    "title": "Extra Multiple Spaces Here",
+    "content": "Content with irregular spacing throughout. Multiple newlines and tabs mixed in.",
+    "url": "https://valid-url.com/page/3",
+    "date": "2024-01-15",
+    "author": ""
+  },
+  {
+    "title": "Article with special chars: café, naïve, 日本語",
+    "content": "Unicode and special characters: café résumé naïve. Em-dash - here. Symbols: © ® ™. Mixed encodings may appear.",
+    "url": "https://example.com/unicode/5",
+    "date": "2024-03-10",
+    "author": "José García"
+  },
+  {
+    "title": "Complete Record",
+    "content": "A fully valid record with clean data. All fields are present, properly formatted, and meet validation criteria. URL is valid, content is long enough, and title exists.",
+    "url": "https://example.org/complete-record",
+    "date": "2024-02-05",
+    "author": "Complete Author"
+  },
+  {
+    "title": "Malformed Date Record",
+    "content": "Content with non-standard date format that needs normalization. Various date formats exist in scraped data.",
+    "url": "https://example.com/dates",
+    "date": "yesterday",
+    "author": "Date Tester"
+  },
+  {
+    "title": "US Date Format",
+    "content": "American date format in the metadata. MM/DD/YYYY style dates need conversion to ISO format for consistency.",
+    "url": "https://example.com/us-dates",
+    "date": "2024-12-25",
+    "author": "US Author"
+  },
+  {
+    "title": "Trailing and Leading Whitespace Everywhere",
+    "content": "Content surrounded by whitespace on both sides.",
+    "url": "https://example.com/whitespace-url",
+    "date": "2024-05-20",
+    "author": "Space User"
+  },
+  {
+    "title": "Duplicate HTML Entities",
+    "content": "Ampersand: & &. Less than: <. Greater than: >. Quote: \". Apostrophe: '.",
+    "url": "https://example.com/entities",
+    "date": "2024-06-15",
+    "author": "Entity Tester"
+  }
+]

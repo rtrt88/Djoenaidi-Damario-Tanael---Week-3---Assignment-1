@@ -1,0 +1,113 @@
+[
+  {
+    "title": "  Valid Article Title  ",
+    "content": "This is a properly formatted article with sufficient content. It discusses important topics and provides useful information for readers. The content meets the minimum length requirement and is well-structured.",
+    "url": "https://example.com/article/1",
+    "date": "2024-01-15",
+    "author": "John Doe"
+  },
+  {
+    "title": "Article with HTML artifacts",
+    "content": "<p>This content has <strong>HTML tags</strong> that need removal.</p><br/>Also has &nbsp; entities and &#8220;smart quotes&#8221; mixed in. <script>alert('xss')</script> should be stripped.",
+    "url": "https://example.com/article/2",
+    "date": "Jan 15, 2024",
+    "author": "Jane Smith"
+  },
+  {
+    "title": "Extra   Multiple   Spaces   Here",
+    "content": "Content with    irregular   spacing  throughout.  \n\n\nMultiple newlines  \t  and tabs  \r\n  mixed in.",
+    "url": "https://valid-url.com/page/3",
+    "date": "15/01/2024",
+    "author": ""
+  },
+  {
+    "title": "Missing Content Record",
+    "content": "Short",
+    "url": "https://example.com/short",
+    "date": "2024-02-01",
+    "author": "Author"
+  },
+  {
+    "title": "Article with special chars: café, naïve, 日本語",
+    "content": "Unicode and special characters: café résumé naïve. Em-dash—here. Symbols: © ® ™. Mixed encodings may appear.",
+    "url": "https://example.com/unicode/5",
+    "date": "2024-03-10T14:30:00",
+    "author": "José García"
+  },
+  {
+    "title": "Missing URL",
+    "content": "This article has valid content and title but is missing a proper URL field. The validation should flag this record.",
+    "url": "",
+    "date": "2024-01-20",
+    "author": "Unknown"
+  },
+  {
+    "title": "",
+    "content": "This record has no title. Missing required fields should be caught by validation. The content is long enough to pass length checks.",
+    "url": "https://example.com/no-title",
+    "date": "Feb 5, 2024",
+    "author": "Anonymous"
+  },
+  {
+    "title": "Invalid URL Format",
+    "content": "Valid content here with enough characters to satisfy minimum length requirements for the pipeline.",
+    "url": "not-a-valid-url",
+    "date": "2024-04-01",
+    "author": "Writer"
+  },
+  {
+    "title": "URL Missing Protocol",
+    "content": "Another valid content block that meets all length requirements and has proper structure for validation.",
+    "url": "www.example.com/missing-protocol",
+    "date": "1/4/2024",
+    "author": "Contributor"
+  },
+  {
+    "title": "Complete Record",
+    "content": "A fully valid record with clean data. All fields are present, properly formatted, and meet validation criteria. URL is valid, content is long enough, and title exists.",
+    "url": "https://example.org/complete-record",
+    "date": "2024-02-05T09:00:00Z",
+    "author": "Complete Author"
+  },
+  {
+    "content": "Record missing title entirely. Only content and url present. Validation must identify missing required fields.",
+    "url": "https://example.com/missing-title-field",
+    "date": "2024-01-01",
+    "author": "Partial"
+  },
+  {
+    "title": "Malformed Date Record",
+    "content": "Content with non-standard date format that needs normalization. Various date formats exist in scraped data.",
+    "url": "https://example.com/dates",
+    "date": "yesterday",
+    "author": "Date Tester"
+  },
+  {
+    "title": "Null and Empty Values",
+    "content": null,
+    "url": "https://example.com/null-content",
+    "date": "2024-01-01",
+    "author": null
+  },
+  {
+    "title": "US Date Format",
+    "content": "American date format in the metadata. MM/DD/YYYY style dates need conversion to ISO format for consistency.",
+    "url": "https://example.com/us-dates",
+    "date": "12/25/2024",
+    "author": "US Author"
+  },
+  {
+    "title": "Trailing and Leading Whitespace Everywhere",
+    "content": "   Content surrounded by whitespace on both sides.   ",
+    "url": "  https://example.com/whitespace-url  ",
+    "date": "  2024-05-20  ",
+    "author": "  Space User  "
+  },
+  {
+    "title": "Duplicate HTML Entities",
+    "content": "Ampersand: &amp; &amp;. Less than: &lt;. Greater than: &gt;. Quote: &quot;. Apostrophe: &#39;.",
+    "url": "https://example.com/entities",
+    "date": "2024-06-15",
+    "author": "Entity Tester"
+  }
+]
